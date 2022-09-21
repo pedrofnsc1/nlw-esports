@@ -10,12 +10,6 @@ Projeto chamado __Encontre o seu duo__, tem como objetivo criar uma plataforma p
 
 
 
-## 🚧 Em construção 🚧:
-- [ ]  Validação de formulários;
-- [ ]  Conexão com a API da Twitch;
-- [ ]  Aplicação Mobile usando React Native.
-
-
 ## Tecnologias usadas 🛠
  * [Vite](https://vitejs.dev/)
  * [React](https://pt-br.reactjs.org/)
@@ -24,4 +18,10 @@ Projeto chamado __Encontre o seu duo__, tem como objetivo criar uma plataforma p
  * [Radix UI](https://www.radix-ui.com/)
  * [Node](https://nodejs.org/en/)
     > Essas foram as tecnologias usadas até o momento.
+
+## 🚧 Em construção 🚧:
+- [ ]  Validação de formulários;
+- [ ]  Conexão com a API da Twitch;
+- [ ]  Aplicação Mobile usando React Native.
+
 
