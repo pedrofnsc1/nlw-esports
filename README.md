@@ -19,6 +19,7 @@ Projeto chamado __Encontre o seu duo__, tem como objetivo criar uma plataforma p
 ## Tecnologias usadas 🛠
  * [Vite](https://vitejs.dev/)
  * [React](https://pt-br.reactjs.org/)
+ * [Typescript](https://typescriptlang.org/)
  * [Tailwind](https://tailwindcss.com/)
  * [Radix UI](https://www.radix-ui.com/)
  * [Node](https://nodejs.org/en/)
