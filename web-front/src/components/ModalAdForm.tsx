@@ -81,11 +81,11 @@ export function ModalAdForm(){
                       <Select.Portal className=''>
                         <Select.Content 
                           className=' bg-zin-900 py-1 px-1 mt-10 rounded'>
-                          {/* <Select.ScrollUpButton
+                          <Select.ScrollUpButton
                             className='flex items-center justify-between h-[25px]
                              bg-zinc-900 hover:bg-zinc-700 cursor-default rounded'>
                               <CaretUp size={20} className="text-violet-500"/>
-                          </Select.ScrollUpButton> */}
+                          </Select.ScrollUpButton>
                           <Select.Viewport className='bg-zinc-900' >
                             {games.map((game) => {
                               return (
@@ -109,6 +109,7 @@ export function ModalAdForm(){
                         </Select.Content>
                       </Select.Portal>
                     </Select.Root>
+
                   </div>
 
                   <div className='flex flex-col gap-2 '>
