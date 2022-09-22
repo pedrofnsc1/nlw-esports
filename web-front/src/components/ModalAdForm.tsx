@@ -1,8 +1,8 @@
 import * as Dialog from '@radix-ui/react-dialog'
 import * as Checkbox from '@radix-ui/react-checkbox'
-//import * as Select from '@radix-ui/react-select'
+import * as Select from '@radix-ui/react-select'
 import * as ToggleGroup from '@radix-ui/react-toggle-group';
-import { Check, GameController } from 'phosphor-react'
+import { CaretDown, CaretUp, Check, GameController } from 'phosphor-react'
 import { Input } from './Form/input'
 import { useEffect, useState, FormEvent } from 'react'
 import axios from 'axios';
@@ -66,22 +66,49 @@ export function ModalAdForm(){
 
                 <form onSubmit={handleCreateAd} className='mt-8 flex flex-col gap-4'>
                   <div className='flex flex-col gap-2 '>
-                    <label htmlFor="game" className='font-semibold'>Qual é o game?</label>
-                    {/* usar o select do radix posteriormente*/}
-                    <select 
-                      id="game" 
-                      name="game"
-                      className="bg-zinc-900 py-3 px-4 rounded text-sm placeholder:text-zinc-500 appearance-none"
-                      >
-                       <option disabled selected className='text-zinc-500'>Selecione o game que deseja jogar</option>
-                    
-                      { games.map((game) => {
-                          return (
-                            <option key={game.id} value={game.id}>{game.title}</option>
-                          )
-                        })
-                      }
-                    </select> 
+                  <label htmlFor="game" className='font-semibold'>Qual é o game?</label>
+                  <Select.Root name='game'>
+                      <Select.Trigger aria-label="game" 
+                          className="flex w-full items-center justify-between
+                           py-3 px-4 rounded text-sm bg-zinc-900">
+                        <Select.Value 
+                          placeholder='Selecione o game que deseja jogar'/>
+                          <Select.Icon>
+                            <CaretDown size={20}/>
+                          </Select.Icon>
+                      </Select.Trigger>
+
+                      <Select.Portal className=''>
+                        <Select.Content 
+                          className=' bg-zin-900 py-1 px-1 mt-10 rounded'>
+                          {/* <Select.ScrollUpButton
+                            className='flex items-center justify-between h-[25px]
+                             bg-zinc-900 hover:bg-zinc-700 cursor-default rounded'>
+                              <CaretUp size={20} className="text-violet-500"/>
+                          </Select.ScrollUpButton> */}
+                          <Select.Viewport className='bg-zinc-900' >
+                            {games.map((game) => {
+                              return (
+                                <Select.Item
+                                  key={game.id}
+                                  value={game.id}
+                                  className="flex px-1 py-1 items-center 
+                                    text-zinc-400 hover:text-zinc-100 
+                                    rounded cursor-pointer">
+                                    <Select.ItemText className='text-white'>
+                                      {game.title}
+                                    </Select.ItemText>
+                                    <Select.ItemIndicator>
+                                     <Check size={20} className='flex items-start mx-1 text-violet-500 hover:text-violet-600'/>
+                                    </Select.ItemIndicator>
+                                </Select.Item>
+
+                              )
+                            })}
+                          </Select.Viewport>
+                        </Select.Content>
+                      </Select.Portal>
+                    </Select.Root>
                   </div>
 
                   <div className='flex flex-col gap-2 '>
